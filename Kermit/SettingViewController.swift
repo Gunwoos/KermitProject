@@ -9,6 +9,30 @@
 import UIKit
 
 class SettingViewController: UIViewController {
+    @IBAction func play(_ sender: Any) {
+        if audioPlayer.isPlaying == false
+        {
+            audioPlayer.play()
+        }
+    }
+    
+    @IBAction func pause(_ sender: Any) {
+        if audioPlayer.isPlaying
+        {
+            audioPlayer.pause()
+        }
+    }
+    
+    @IBAction func prev(_ sender: Any) {
+    }
+    
+    @IBAction func next(_ sender: Any) {
+    }
+    
+    @IBAction func soundSlider(_ sender: UISlider) {
+        audioPlayer.volume = sender.value
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,17 +52,5 @@ class SettingViewController: UIViewController {
         //            blue: 0.0,
         //            alpha: BGAlpha)
     }
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

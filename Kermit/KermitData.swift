@@ -15,48 +15,68 @@ class KermitData{
         let name = ""
         let image = UIImage(named: "Kermit_1")
         let tripTitle = [
-            "뚝섬유원지"
+            "뚝섬유원지",
+            "옥타곤",
+            "아레나"
         ]
         let tripUrlList = [
-            "http://korean.visitseoul.net/attractions/뚝섬유원지_/11399"
+            "https://www.google.com/maps/search/tukseom/@37.5315366,127.0579362,15z/data=!3m1!4b1",
+            "https://www.octagonseoul.com",
+            "http://octagon.thejoy.kr"
         ]
         let tripLatitude = [
-            37.531792
+            37.531792,
+            37.511384,
+            37.514558
         ]
         let tripLongitude = [
-            127.066648
+            127.066648,
+            127.031424,
+            127.020468
         ]
     }
     class KermitGangWonDo{
         let name = ""
         let image = UIImage(named: "Kermit_2")
         let tripTitle = [
-            "경포대 해수욕장"
+            "경포대 해수욕장",
+            "화암 동굴",
+            "삼척 해양 레일 바이크"
         ]
         let tripUrlList = [
-            "http://korean.visitkorea.or.kr/kor/bz15/where/where_main_search.jsp?cid=128758"
+            "http://korean.visitkorea.or.kr/kor/bz15/where/where_main_search.jsp?cid=128758",
+            "http://jsimc.or.kr/html/5tour/2tour1.php",
+            "http://oceanrailbike.net/main/main.do"
         ]
         let tripLatitude = [
-            37.805213
+            37.805213,
+            37.576074,
+            37.593486
         ]
         let tripLongitude = [
-            128.907745
+            128.907745,
+            128.749832,
+            129.288162
         ]
     }
     class KermitGyeonggido{
         let name = ""
         let image = UIImage(named: "Kermit_3")
         let tripTitle = [
-            "장봉도"
+            "장봉도",
+            "송도 센트럴 파크"
         ]
         let tripUrlList = [
-            "http://korean.visitkorea.or.kr/kor/bz15/where/where_main_search.jsp?cid=128005"
+            "http://korean.visitkorea.or.kr/kor/bz15/where/where_main_search.jsp?cid=128005",
+            "http://www.insiseol.or.kr/institution_guidance/central_park/index.asp"
         ]
         let tripLatitude = [
-            37.540170
+            37.540170,
+            37.413488
         ]
         let tripLongitude = [
-            126.336672
+            126.336672,
+            126.638724
         ]
     }
     class KermitBusan{
