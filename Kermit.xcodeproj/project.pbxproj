@@ -10,11 +10,14 @@
 		C4B8E7A7210172FD005BBE71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8E7A6210172FD005BBE71 /* AppDelegate.swift */; };
 		C4B8E7A9210172FD005BBE71 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8E7A8210172FD005BBE71 /* HomeViewController.swift */; };
 		C4B8E7AC210172FD005BBE71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B8E7AA210172FD005BBE71 /* Main.storyboard */; };
-		C4B8E7AE210172FF005BBE71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B8E7AD210172FF005BBE71 /* Assets.xcassets */; };
 		C4B8E7B1210172FF005BBE71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B8E7AF210172FF005BBE71 /* LaunchScreen.storyboard */; };
 		C4B8E7B9210175E3005BBE71 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8E7B8210175E3005BBE71 /* LoadingViewController.swift */; };
 		C4B8E7BB21017605005BBE71 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8E7BA21017605005BBE71 /* CharacterViewController.swift */; };
 		C4B8E7BD2101760F005BBE71 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8E7BC2101760F005BBE71 /* SettingViewController.swift */; };
+		C4B8E7BF210182E0005BBE71 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8E7BE210182E0005BBE71 /* MapViewController.swift */; };
+		C4B8E7C52101A6AB005BBE71 /* KermitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8E7C42101A6AB005BBE71 /* KermitData.swift */; };
+		C4B8E7C72101B311005BBE71 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8E7C62101B311005BBE71 /* CharacterTableViewCell.swift */; };
+		C4B8E7CB2101CE67005BBE71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B8E7CA2101CE66005BBE71 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +25,15 @@
 		C4B8E7A6210172FD005BBE71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4B8E7A8210172FD005BBE71 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C4B8E7AB210172FD005BBE71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C4B8E7AD210172FF005BBE71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4B8E7B0210172FF005BBE71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4B8E7B2210172FF005BBE71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4B8E7B8210175E3005BBE71 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		C4B8E7BA21017605005BBE71 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 		C4B8E7BC2101760F005BBE71 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		C4B8E7BE210182E0005BBE71 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C4B8E7C42101A6AB005BBE71 /* KermitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KermitData.swift; sourceTree = "<group>"; };
+		C4B8E7C62101B311005BBE71 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
+		C4B8E7CA2101CE66005BBE71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +67,16 @@
 			isa = PBXGroup;
 			children = (
 				C4B8E7A6210172FD005BBE71 /* AppDelegate.swift */,
-				C4B8E7A8210172FD005BBE71 /* HomeViewController.swift */,
+				C4B8E7CA2101CE66005BBE71 /* Assets.xcassets */,
 				C4B8E7AA210172FD005BBE71 /* Main.storyboard */,
-				C4B8E7AD210172FF005BBE71 /* Assets.xcassets */,
 				C4B8E7AF210172FF005BBE71 /* LaunchScreen.storyboard */,
 				C4B8E7B8210175E3005BBE71 /* LoadingViewController.swift */,
+				C4B8E7A8210172FD005BBE71 /* HomeViewController.swift */,
 				C4B8E7BA21017605005BBE71 /* CharacterViewController.swift */,
+				C4B8E7C62101B311005BBE71 /* CharacterTableViewCell.swift */,
 				C4B8E7BC2101760F005BBE71 /* SettingViewController.swift */,
+				C4B8E7BE210182E0005BBE71 /* MapViewController.swift */,
+				C4B8E7C42101A6AB005BBE71 /* KermitData.swift */,
 				C4B8E7B2210172FF005BBE71 /* Info.plist */,
 			);
 			path = Kermit;
@@ -132,7 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4B8E7B1210172FF005BBE71 /* LaunchScreen.storyboard in Resources */,
-				C4B8E7AE210172FF005BBE71 /* Assets.xcassets in Resources */,
+				C4B8E7CB2101CE67005BBE71 /* Assets.xcassets in Resources */,
 				C4B8E7AC210172FD005BBE71 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,10 +154,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4B8E7BD2101760F005BBE71 /* SettingViewController.swift in Sources */,
+				C4B8E7C52101A6AB005BBE71 /* KermitData.swift in Sources */,
+				C4B8E7BF210182E0005BBE71 /* MapViewController.swift in Sources */,
 				C4B8E7BB21017605005BBE71 /* CharacterViewController.swift in Sources */,
 				C4B8E7A9210172FD005BBE71 /* HomeViewController.swift in Sources */,
 				C4B8E7A7210172FD005BBE71 /* AppDelegate.swift in Sources */,
 				C4B8E7B9210175E3005BBE71 /* LoadingViewController.swift in Sources */,
+				C4B8E7C72101B311005BBE71 /* CharacterTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

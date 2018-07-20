@@ -6,25 +6,78 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Kermit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kermit_basic" translatesAutoresizingMaskIntoConstraints="NO" id="aew-M4-iIU">
+                                <rect key="frame" x="50" y="164" width="275" height="354"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aew-M4-iIU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Nr6-0l-5gd"/>
+                            <constraint firstItem="aew-M4-iIU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Pud-v8-ahw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aew-M4-iIU" secondAttribute="trailing" constant="50" id="RMQ-i8-AZ1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aew-M4-iIU" secondAttribute="bottom" constant="100" id="VAb-f1-6Mc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="knX-nY-aYJ"/>
+                    <navigationItem key="navigationItem" title="Home" id="c4K-DW-km1">
+                        <barButtonItem key="rightBarButtonItem" title="Go!" id="0TM-Zr-cWH">
+                            <connections>
+                                <segue destination="YPb-s4-MRV" kind="show" id="8qh-YZ-cDx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="HomeKermitImageView" destination="aew-M4-iIU" id="KJk-SA-kvN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137" y="1554"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="z9J-T5-QeW">
+            <objects>
+                <viewController id="YPb-s4-MRV" customClass="MapViewController" customModule="Kermit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J9J-6s-l4C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EA1-aw-daG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <connections>
+                                    <outlet property="delegate" destination="YPb-s4-MRV" id="8o1-Hw-wMF"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EA1-aw-daG" firstAttribute="leading" secondItem="YYy-PZ-GJz" secondAttribute="leading" id="3Ue-l8-bqI"/>
+                            <constraint firstItem="YYy-PZ-GJz" firstAttribute="bottom" secondItem="EA1-aw-daG" secondAttribute="bottom" id="FDy-tg-vF0"/>
+                            <constraint firstItem="YYy-PZ-GJz" firstAttribute="trailing" secondItem="EA1-aw-daG" secondAttribute="trailing" id="LjQ-qg-tiS"/>
+                            <constraint firstItem="EA1-aw-daG" firstAttribute="top" secondItem="YYy-PZ-GJz" secondAttribute="top" id="YZE-pb-1cX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YYy-PZ-GJz"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="EA1-aw-daG" id="bAR-Be-7lD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xsG-bC-tCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="1554"/>
         </scene>
         <!--Character-->
         <scene sceneID="ekd-b9-Wh2">
@@ -33,7 +86,58 @@
                     <view key="view" contentMode="scaleToFill" id="P43-ku-CX4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AZC-ak-ysc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterCell" rowHeight="200" id="R7C-uO-56w" customClass="CharacterTableViewCell" customModule="Kermit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R7C-uO-56w" id="Qom-4a-uXG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IMD-c2-INC">
+                                                    <rect key="frame" x="10" y="10" width="355" height="138"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kermit Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ome-fN-TpB">
+                                                    <rect key="frame" x="15" y="158" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.64330050679999995" green="0.99193829300000003" blue="0.5977818547" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ome-fN-TpB" secondAttribute="trailing" id="34h-Ad-AGP"/>
+                                                <constraint firstItem="IMD-c2-INC" firstAttribute="top" secondItem="Qom-4a-uXG" secondAttribute="top" constant="10" id="7Nn-VJ-xjm"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ome-fN-TpB" secondAttribute="bottom" constant="10" id="LDc-3I-gdE"/>
+                                                <constraint firstItem="IMD-c2-INC" firstAttribute="leading" secondItem="Qom-4a-uXG" secondAttribute="leading" constant="10" id="OBa-gK-UY6"/>
+                                                <constraint firstItem="Ome-fN-TpB" firstAttribute="leading" secondItem="Qom-4a-uXG" secondAttribute="leadingMargin" id="XQG-NC-hBh"/>
+                                                <constraint firstItem="Ome-fN-TpB" firstAttribute="top" secondItem="IMD-c2-INC" secondAttribute="bottom" constant="10" id="adI-eh-11F"/>
+                                                <constraint firstAttribute="trailing" secondItem="IMD-c2-INC" secondAttribute="trailing" constant="10" id="pHr-Mg-x3N"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="CharacterImage" destination="IMD-c2-INC" id="25g-wI-pfr"/>
+                                            <outlet property="CharacterName" destination="Ome-fN-TpB" id="20j-Jw-qgj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="EdC-Uw-M7p" id="BLq-Ue-P3h"/>
+                                    <outlet property="delegate" destination="EdC-Uw-M7p" id="y81-ih-ZhW"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AZC-ak-ysc" firstAttribute="leading" secondItem="o30-8a-VY6" secondAttribute="leading" id="3Gd-bK-Hme"/>
+                            <constraint firstItem="o30-8a-VY6" firstAttribute="bottom" secondItem="AZC-ak-ysc" secondAttribute="bottom" id="AJr-1C-TVx"/>
+                            <constraint firstItem="AZC-ak-ysc" firstAttribute="top" secondItem="o30-8a-VY6" secondAttribute="top" id="B6h-Pj-DrV"/>
+                            <constraint firstItem="o30-8a-VY6" firstAttribute="trailing" secondItem="AZC-ak-ysc" secondAttribute="trailing" id="a3Y-NJ-vxx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="o30-8a-VY6"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Character" id="aNh-xd-LA2"/>
@@ -65,22 +169,42 @@
                     <view key="view" contentMode="scaleToFill" id="9jP-gB-0z5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kermit_Loading" translatesAutoresizingMaskIntoConstraints="NO" id="TJL-iB-DH2">
+                                <rect key="frame" x="20" y="220" width="335" height="247"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="커밋의 여름나기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LL3-fo-KGy">
+                                <rect key="frame" x="0.0" y="130" width="375" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.64330050679999995" green="0.99193829300000003" blue="0.5977818547" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="IFr-GJ-TZL" firstAttribute="trailing" secondItem="LL3-fo-KGy" secondAttribute="trailing" id="4Ns-ZK-afH"/>
+                            <constraint firstItem="IFr-GJ-TZL" firstAttribute="trailing" secondItem="TJL-iB-DH2" secondAttribute="trailing" constant="20" id="5vA-dN-ZdX"/>
+                            <constraint firstItem="TJL-iB-DH2" firstAttribute="leading" secondItem="IFr-GJ-TZL" secondAttribute="leading" constant="20" id="6Dm-Ai-rKT"/>
+                            <constraint firstItem="LL3-fo-KGy" firstAttribute="top" secondItem="IFr-GJ-TZL" secondAttribute="top" constant="110" id="BU2-ea-YAc"/>
+                            <constraint firstItem="IFr-GJ-TZL" firstAttribute="bottom" secondItem="TJL-iB-DH2" secondAttribute="bottom" constant="200" id="JnU-hi-4C4"/>
+                            <constraint firstItem="LL3-fo-KGy" firstAttribute="leading" secondItem="IFr-GJ-TZL" secondAttribute="leading" id="bj3-l3-TEn"/>
+                            <constraint firstItem="TJL-iB-DH2" firstAttribute="top" secondItem="IFr-GJ-TZL" secondAttribute="top" constant="200" id="dsB-fn-Ub8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IFr-GJ-TZL"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kc1-1J-O4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="-537"/>
+            <point key="canvasLocation" x="-802" y="133"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="iqI-Vc-iVn">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ueu-8p-HcV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="abW-bP-6fX">
+                    <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="abW-bP-6fX">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="6U6-q4-xOn" kind="relationship" relationship="viewControllers" id="DAE-1s-oKy"/>
@@ -112,4 +236,8 @@
             <point key="canvasLocation" x="136.80000000000001" y="861.3193403298352"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Kermit_Loading" width="900" height="478"/>
+        <image name="Kermit_basic" width="600" height="600"/>
+    </resources>
 </document>
